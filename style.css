@@ -74,7 +74,7 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-image: linear-gradient(to bottom right, #29ec91, #4abdeb);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
@@ -86,6 +86,10 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 2px 4px 4px #c0c7cf;
 }
 
 button[disabled] {
