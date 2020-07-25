@@ -1,4 +1,3 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 var choseUpperCase = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
@@ -6,7 +5,6 @@ var choseLowerCase = "quertyuiopasdfghjklzxcvbnm".split("");
 var choseNumbers = "1234567890".split("");
 var choseSpecial = "!#$%&*+<=>?@/[]^_`|~".split(""); 
 
-// User Prompt
 alert("Welcome to your new favorite password generator. Please click Generate New Password to get started, then select your password requirements in the following prompts. Enjoy!")
 
 function generatePassword() {
@@ -16,12 +14,12 @@ function generatePassword() {
 
   var howMany = prompt("How many characters would you like your password to be? Choose length between 8-128 below:");
   if (parseInt(howMany) < 8 || parseInt(howMany) > 128) {
-    alert("Please choose a number for a pasword length between 8-128 characters. Time to start over!");
+    alert("Please choose a number for a password length between 8-128 characters. Time to start over!");
     return location.reload();
     } 
     
   if (howMany === "" || howMany === null) {
-    alert("Please choose a number for a pasword length between 8-128 characters. Time to start over!");
+    alert("Please choose a number for a password length between 8-128 characters. Time to start over!");
     return location.reload();
   }
 
@@ -37,7 +35,6 @@ function generatePassword() {
 
   console.log(typeof howMany)
 
-    
     if (uUpper === true) {
       for (var i = 0; i < choseUpperCase.length; i++) {
         myArray.push(choseUpperCase[i]);
