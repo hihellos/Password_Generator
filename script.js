@@ -7,7 +7,7 @@ var choseNumbers = "1234567890".split("");
 var choseSpecial = "!#$%&*+<=>?@/[]^_`|~".split(""); 
 
 // User Prompt
-alert("Welcome to your new favorite password generator! Please click Generate New Password to get started. Select your password requirements in the following prompts. Enjoy!")
+alert("Welcome to your new favorite password generator. Please click Generate New Password to get started, then select your password requirements in the following prompts. Enjoy!")
 
 function generatePassword() {
   
@@ -16,16 +16,24 @@ function generatePassword() {
 
   var howMany = prompt("How many characters would you like your password to be? Choose length between 8-128 below:");
   if (parseInt(howMany) < 8 || parseInt(howMany) > 128) {
-    console.log("Password must be between 8-128 characters.")
-    alert("Password must be between 8-128 characters.");
+    alert("Please choose a number for a pasword length between 8-128 characters. Time to start over!");
     return location.reload();
+    } 
     
-    }
+  if (howMany === "" || howMany === null) {
+    alert("Please choose a number for a pasword length between 8-128 characters. Time to start over!");
+    return location.reload();
+  }
 
   var uUpper = confirm("Do you want to include uppercase letters?");
   var uLower = confirm("Do you want to include lowercase letters?");
   var num = confirm("Do you want to include numbers?");
   var char = confirm("Do you want to include special characters?");
+
+  if (uUpper == "" && uLower == "" && num == "" && char == "") {
+    alert("Please choose at lease one character type for your password. Time to start over!");
+    return location.reload();
+  }
 
   console.log(typeof howMany)
 
