@@ -7,7 +7,7 @@ var choseNumbers = "1234567890".split("");
 var choseSpecial = "!#$%&*+<=>?@/[]^_`|~".split(""); 
 
 // User Prompt
-alert("Welcome to your password generator! Please select your password requirements in the next few prompts. Then click Generate New Password to see your result. You can continue clicking to generate a new random password as many times as you would like!")
+alert("Welcome to your new favorite password generator! Please click Generate New Password to get started. Select your password requirements in the following prompts. Enjoy!")
 
 function generatePassword() {
   
